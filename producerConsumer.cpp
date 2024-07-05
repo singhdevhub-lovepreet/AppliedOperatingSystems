@@ -66,13 +66,13 @@ void consumer() {
 
 int main() {
     std::thread producerThread([] {
-        for (int i = 1; i <= 20; ++i) {
+        for (int i = 1; i <= 20000; ++i) {
             producer(i);
         }
     });
     
     std::thread consumerThread([] {
-        for (int i = 1; i <= 20; ++i) {
+        for (int i = 1; i <= 20000; ++i) {
             consumer();
         }
     });
